@@ -33,7 +33,7 @@ class User extends CI_Controller {
             return print_r(json_encode('Data is missing'));
         }
         $checkUsername = $this->User_model->getUserByUsername($post_body['username']);
-        $checkEmail = $this->User_model->getUserByUsername($post_body['email']);
+        $checkEmail = $this->User_model->getUserByEmail($post_body['email']);
         if($checkUsername){
             $response['status'] = 'duplicate-username';
             return print_r(json_encode($response));
