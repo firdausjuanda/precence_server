@@ -65,3 +65,11 @@ $route["checkIn"]['post'] = "presence/check_in/";
 $route["checkOut"]['post'] = "presence/check_out/";
 $route["presences"]['get'] = "presence/get_presences/";
 $route["user_presences"]['get'] = "presence/get_user_presences/";
+
+// Companies
+$route["create_company"]['post'] = "company/create_company/";
+$route["set_admin"]['post'] = "company/set_admin/";
+$route["set_user_company"]['post'] = "company/set_user_company/";
+$route["set_check_point"]['post'] = "company/set_check_point/";
+$route["set_radius"]['post'] = "company/set_radius/";
+$route["check_user_admin"]['get'] = "company/check_user_admin/";

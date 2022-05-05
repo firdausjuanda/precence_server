@@ -135,4 +135,5 @@ $autoload['language'] = array();
 $autoload['model'] = array(
     'User_model',
     'Presence_model',
+    'Company_model',
 );

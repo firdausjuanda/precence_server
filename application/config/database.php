@@ -84,8 +84,9 @@ $db['default'] = array(
 	// Development config
 	// 'hostname' => 'localhost',
 	// 'username' => 'root',
-	// 'password' => 'root',
-	// 'database' => 'db_winpad',
+	// 'password' => '',
+	// 'database' => 'db_presence',
+
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
