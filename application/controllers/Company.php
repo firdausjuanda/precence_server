@@ -148,7 +148,7 @@ class Company extends CI_Controller {
         } else {
             try{
                 $data_input['radius'] = $post_data['radius'];
-                $this->db->where('id', $post_data['companyId']);
+                $this->db->where('companyId', $post_data['companyId']);
                 $this->db->update('companySettings', $data_input);
                 $response['data'] = $post_data;
                 $response['status'] = 'success';
