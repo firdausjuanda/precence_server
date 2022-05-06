@@ -123,7 +123,7 @@ class Company extends CI_Controller {
             try{
                 $data_input['lat'] = $post_data['lat'];
                 $data_input['long'] = $post_data['long'];
-                $this->db->where('id', $post_data['companyId']);
+                $this->db->where('companyId', $post_data['companyId']);
                 $this->db->update('companySettings', $data_input);
                 $response['data'] = $post_data;
                 $response['status'] = 'success';
