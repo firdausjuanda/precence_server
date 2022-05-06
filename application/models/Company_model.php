@@ -17,4 +17,18 @@ class Company_model extends CI_Model {
         $this->db->where('companyId', $companyId);
         return $this->db->get()->row_array();
     }
+    public function getCompanyRadius($companyId)
+    {
+        $this->db->select('radius');
+        $this->db->from('companySettings');
+        $this->db->where('companyId', $companyId);
+        return $this->db->get()->row_array();
+    }
+    public function getCompanyCheckPoint($companyId)
+    {
+        $this->db->select('lat, long');
+        $this->db->from('companySettings');
+        $this->db->where('companyId', $companyId);
+        return $this->db->get()->row_array();
+    }
 }

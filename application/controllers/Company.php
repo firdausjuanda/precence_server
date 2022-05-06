@@ -158,6 +158,46 @@ class Company extends CI_Controller {
             }
         }
     }
+    public function get_radius()
+    {
+        $get_data = $this->input->get();
+        if(!$this->input->get('companyId')){
+            $response['status'] = 'invalid-input';
+            return print_r(json_encode($response));
+        } elseif(!$this->db->get_where('companies', ['id' => $get_data['companyId']])->row_array()) {
+            $response['status'] = 'company-not-found';
+            return print_r(json_encode($response));
+        } else {
+            try{
+                $get_data = $this->Company_model->getCompanyRadius($get_data['companyId']);
+                $response['data'] = $get_data;
+                $response['status'] = 'success';
+                return print_r(json_encode($response));
+            } catch (Exception $e){
+                return print_r(json_encode($e));
+            }
+        }
+    }
+    public function get_check_point()
+    {
+        $get_data = $this->input->get();
+        if(!$this->input->get('companyId')){
+            $response['status'] = 'invalid-input';
+            return print_r(json_encode($response));
+        } elseif(!$this->db->get_where('companies', ['id' => $get_data['companyId']])->row_array()) {
+            $response['status'] = 'company-not-found';
+            return print_r(json_encode($response));
+        } else {
+            try{
+                $get_data = $this->Company_model->getCompanyCheckPoint($get_data['companyId']);
+                $response['data'] = $get_data;
+                $response['status'] = 'success';
+                return print_r(json_encode($response));
+            } catch (Exception $e){
+                return print_r(json_encode($e));
+            }
+        }
+    }
 
     public function check_user_admin()
     {

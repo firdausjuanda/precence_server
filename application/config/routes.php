@@ -72,4 +72,6 @@ $route["set_admin"]['post'] = "company/set_admin/";
 $route["set_user_company"]['post'] = "company/set_user_company/";
 $route["set_check_point"]['post'] = "company/set_check_point/";
 $route["set_radius"]['post'] = "company/set_radius/";
+$route["get_radius"]['get'] = "company/get_radius/";
+$route["get_cp"]['get'] = "company/get_check_point/";
 $route["check_user_admin"]['get'] = "company/check_user_admin/";
